@@ -1,0 +1,36 @@
+body { background: #111; color: white; font-family: sans-serif; text-align: center; padding: 10px; margin: 0; }
+
+/* Navigation Tabs */
+.tabs { display: flex; justify-content: center; margin-bottom: 20px; }
+.tab { padding: 15px; font-size: 16px; font-weight: bold; background: #333; color: #888; border: none; cursor: pointer; flex: 1; max-width: 200px; }
+.tab.active { background: #007bff; color: white; }
+.tab:first-child { border-radius: 8px 0 0 8px; }
+.tab:last-child { border-radius: 0 8px 8px 0; }
+
+.mode-section { display: none; flex-direction: column; align-items: center; }
+.mode-section.active { display: flex; }
+
+/* Camera Styles */
+video { width: 100%; max-width: 600px; border: 2px solid red; }
+#outCanvas { width: 100%; max-width: 600px; aspect-ratio: 56/32; background: #000; image-rendering: pixelated; border: 2px solid #555; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); margin-bottom: 30px; }
+#startBtn { padding: 15px 30px; font-size: 18px; font-weight: bold; background: #007bff; color: white; border: none; border-radius: 8px; width: 100%; max-width: 300px; margin-bottom: 20px; }
+
+/* Sand Game Styles */
+.controls { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;}
+.tool { padding: 15px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; color: white;}
+.sand { background: #dcb432; color: black; font-weight: bold;}
+.water { background: #1464dc; }
+.wall { background: #646464; }
+.erase { background: #000; border: 1px solid #fff; }
+.clear { background: #d32f2f; }
+.tool.selected { outline: 3px solid white; transform: scale(1.1); }
+#sandPad { width: 100%; max-width: 600px; aspect-ratio: 56/32; background: #111; border: 2px solid #444; border-radius: 8px; position: relative; touch-action: none; box-shadow: 0 10px 20px rgba(0,0,0,0.5); image-rendering: pixelated; }
+.instruction { color: #888; margin-top: 10px; }
+
+/* Snake Game Styles */
+#snakePad { width: 100%; max-width: 600px; aspect-ratio: 56/32; background: #000; border: 2px solid #555; border-radius: 8px; image-rendering: pixelated; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+.score-display { font-size: 24px; font-weight: bold; margin-bottom: 10px; color: #ffcc00; }
+.dpad { display: flex; flex-direction: column; align-items: center; gap: 0px; margin-top: 20px; width: 100%; max-width: 500px; }
+.dpad-middle { display: flex; justify-content: center; width: 100%; gap: 135px; }
+.dpad-btn { width: 135px; height: 135px; font-size: 54px; background: #333; color: white; border: 2px solid #666; border-radius: 20px; cursor: pointer; user-select: none; -webkit-user-select: none; touch-action: manipulation; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+.dpad-btn:active { background: #007bff; border-color: #0056b3; transform: scale(0.95); }

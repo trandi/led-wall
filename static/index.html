@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LED Matrix Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab active" id="tab-camera" onclick="switchMode('camera')">📷 Camera</button>
+        <button class="tab" id="tab-sand" onclick="switchMode('sand')">🏖️ Sand</button>
+        <button class="tab" id="tab-snake" onclick="switchMode('snake')">🐍 Snake</button>
+    </div>
+
+    <!-- CAMERA SECTION -->
+    <div id="section-camera" class="mode-section active">
+        <h2>Live Matrix Mirror</h2>
+        <canvas id="outCanvas" width="56" height="32"></canvas>
+        <button id="startBtn">START CAMERA</button>
+        <video id="videoElement" autoplay playsinline></video>
+    </div>
+
+    <!-- SAND SECTION -->
+    <div id="section-sand" class="mode-section">
+        <div class="controls">
+            <button class="tool sand selected" data-el="1">Sand</button>
+            <button class="tool water" data-el="2">Water</button>
+            <button class="tool wall" data-el="3">Wall</button>
+            <button class="tool erase" data-el="0">Eraser</button>
+            <button class="clear" id="btn-clear">Clear All</button>
+        </div>
+        <canvas id="sandPad" width="56" height="32"></canvas>
+        <div class="instruction">Draw on the pad to drop elements!</div>
+    </div>
+
+    <!-- SNAKE SECTION -->
+    <div id="section-snake" class="mode-section">
+        <div class="score-display">Score: <span id="snakeScore">0</span></div>
+        <canvas id="snakePad" width="56" height="32"></canvas>
+        <div class="dpad">
+            <button class="dpad-btn up" onpointerdown="setSnakeDir(0, -1)">▲</button>
+            <div class="dpad-middle">
+                <button class="dpad-btn left" onpointerdown="setSnakeDir(-1, 0)">◀</button>
+                <button class="dpad-btn right" onpointerdown="setSnakeDir(1, 0)">▶</button>
+            </div>
+            <button class="dpad-btn down" onpointerdown="setSnakeDir(0, 1)">▼</button>
+        </div>
+    </div>
+
+    <!-- Modular Scripts -->
+    <script src="/static/main.js"></script>
+    <script src="/static/camera.js"></script>
+    <script src="/static/sand.js"></script>
+    <script src="/static/snake.js"></script>
+</body>
+</html>
