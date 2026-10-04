@@ -9,7 +9,7 @@ startBtn.addEventListener('click', async () => {
     
     try {
         const stream = await navigator.mediaDevices.getUserMedia({ 
-            video: { facingMode: "environment", width: { ideal: 4000 } } 
+            video: { facingMode: "environment" } 
         });
         video.srcObject = stream;
         startBtn.innerText = "STREAMING TO WLED...";
@@ -30,9 +30,12 @@ function processFrame() {
             cropHeight = video.videoHeight;
             cropWidth = video.videoHeight * targetAspect;
         }    
+
+        const startX = (video.videoWidth - cropWidth) / 2;
+        const startY = (video.videoHeight - cropHeight) / 2;
                 
         ctx.filter = 'contrast(150%) saturate(150%)';
-        ctx.drawImage(video, 0, 0, cropWidth, cropHeight, 0, 0, 56, 32);
+        ctx.drawImage(video, startX, startY, cropWidth, cropHeight, 0, 0, 56, 32);
         
         const imgData = ctx.getImageData(0, 0, 56, 32).data;
         const rgbData = new Uint8Array(56 * 32 * 3);
