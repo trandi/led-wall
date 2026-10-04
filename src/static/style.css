@@ -13,7 +13,10 @@ body { background: #111; color: white; font-family: sans-serif; text-align: cent
 /* Camera Styles */
 video { width: 100%; max-width: 600px; border: 2px solid red; }
 #outCanvas { width: 100%; max-width: 600px; aspect-ratio: 56/32; background: #000; image-rendering: pixelated; border: 2px solid #555; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); margin-bottom: 30px; }
-#startBtn { padding: 15px 30px; font-size: 18px; font-weight: bold; background: #007bff; color: white; border: none; border-radius: 8px; width: 100%; max-width: 300px; margin-bottom: 20px; }
+.camera-controls { display: flex; gap: 10px; width: 100%; max-width: 600px; justify-content: center; margin-bottom: 20px; }
+#startBtn, #printBtn { padding: 15px 20px; font-size: 18px; font-weight: bold; background: #007bff; color: white; border: none; border-radius: 8px; flex: 1; cursor: pointer; }
+#printBtn { background: #28a745; }
+.error-msg { color: #ff4444; font-weight: bold; margin-bottom: 15px; min-height: 20px; display: none; }
 
 /* Sand Game Styles */
 .controls { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;}

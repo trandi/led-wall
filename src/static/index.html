@@ -16,7 +16,11 @@
     <div id="section-camera" class="mode-section active">
         <h2>Live Matrix Mirror</h2>
         <canvas id="outCanvas" width="56" height="32"></canvas>
-        <button id="startBtn">START CAMERA</button>
+        <div class="camera-controls">
+            <button id="startBtn">START CAMERA</button>
+            <button id="printBtn">PRINT</button>
+        </div>
+        <div id="printError" class="error-msg"></div>
         <video id="videoElement" autoplay playsinline></video>
     </div>
 
