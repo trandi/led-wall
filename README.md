@@ -2,9 +2,6 @@
 32x56 frame build from strips of individually addressable RGB LEDs
 
 ## Media
-![20250818 LEDframe MainCableFixing1](media/20250818_LEDframe_MainCableFixing1.jpeg)
-![20250818 LEDframe MainCableFixing2](media/20250818_LEDframe_MainCableFixing2.jpeg)
-![20250822 LEDframe stripsLayingTool](media/20250822_LEDframe_stripsLayingTool.jpeg)
 ![20250827 LEDframe layingTheStripsOnAluminiumPlate1](media/20250827_LEDframe_layingTheStripsOnAluminiumPlate1.jpg)
 ![20250827 LEDframe layingTheStripsOnAluminiumPlate2](media/20250827_LEDframe_layingTheStripsOnAluminiumPlate2.jpg)
 ![20250827 LEDframe layingTheStripsOnAluminiumPlate3](media/20250827_LEDframe_layingTheStripsOnAluminiumPlate3.jpg)
