@@ -1,5 +1,6 @@
 # [led-wall](https://youtu.be/6Ht_ufpHa0c)
 32x56 frame build from strips of individually addressable RGB LEDs
+[More details on the blog](https://trandi.wordpress.com/2026/10/23/32x56-rgb-led-panel-with-wled/)
 
 ## Media
 ![20250827 LEDframe layingTheStripsOnAluminiumPlate1](media/20250827_LEDframe_layingTheStripsOnAluminiumPlate1.jpg)
